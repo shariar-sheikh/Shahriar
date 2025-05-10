@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shahriar's Portfolio</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #00d1ff;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px 0;
+  border: 3px solid #00d1ff;
+  transition: transform 0.3s ease;
+}
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+.btn {
+  padding: 15px 25px;
+  background-color: #1e1e1e;
+  color: #00d1ff;
+  text-decoration: none;
+  border: 1px solid #00d1ff;
+  border-radius: 10px;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn:hover {
+  background-color: #00d1ff;
+  color: #000;
+  transform: translateY(-5px);
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #888;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Shahriar's Portfolio</h1>
+    </header>
+
+    <section class="profile">
+      <img src="https://scontent.fjsr8-1.fna.fbcdn.net/v/t39.30808-6/492324437_122109186374831480_4453612814249888182_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeH_mcAdfBEH6gjcVNilGbKFg4xr5YuDBs-DjGvli4MGz-OABaW_TkQR5qBGqTA5ZnA5SdG-4UCjXzyaSRDHMIdt&_nc_ohc=w5WcQFa_hXIQ7kNvwHp3MAi&_nc_oc=Adk0LaVAzu1xSJwhNohrGuv0d15E1PV6JcZUTgCV5Kjviw2HCOMpl52uROM9bafRVTY&_nc_zt=23&_nc_ht=scontent.fjsr8-1.fna&_nc_gid=vXLJo4klIuwuSLhZqMDvAA&oh=00_AfKN-sOLrQATzyTERQT939BwMybIzaZt0bmvikMG-O6V0Q&oe=6825215B" alt="Shahriar's Photo" class="profile-pic"/>
+      <p>Hello! I'm Shahriar. I'm a passionate designer and developer.</p>
+    </section>
+
+    <section class="downloads">
+      <h2>Download My Favorite Tools</h2>
+      <div class="btn-group">
+        <a href="https://drive.google.com/file/d/1XF5_eG2j0_JM43IdmaKV7jm8ng1qce-B/view?usp=drive_link" class="btn">Download Office 2019</a>
+        <a href="https://drive.google.com/drive/folders/19O_nMuIs6vQsUhEVME4XKZDlVF2hXh-u?usp=drive_link" class="btn">Download Illustrator</a>
+        <a href="https://drive.google.com/drive/folders/19O_nMuIs6vQsUhEVME4XKZDlVF2hXh-u?usp=drive_link" class="btn">Download Photoshop</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Shahriar. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js">
+    // Small animation effect on load
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.container');
+  container.style.opacity = 1;
+});
+
+  </script>
+</body>
+</html>
