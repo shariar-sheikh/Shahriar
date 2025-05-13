@@ -6,71 +6,98 @@
   <title>Shahriar's Portfolio</title>
   <style>
     body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: #ffffff;
-  overflow-x: hidden;
-}
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
 
-.container {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-  animation: fadeIn 1s ease-in-out;
-}
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
 
-header h1 {
-  font-size: 2.5em;
-  color: #00d1ff;
-  margin-bottom: 20px;
-}
+    header h1 {
+      font-size: 2.5em;
+      color: #00d1ff;
+      margin-bottom: 20px;
+    }
 
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 20px 0;
-  border: 3px solid #00d1ff;
-  transition: transform 0.3s ease;
-}
-.profile-pic:hover {
-  transform: scale(1.1);
-}
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 20px 0;
+      border: 3px solid #00d1ff;
+      transition: transform 0.3s ease;
+    }
 
-.btn-group {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
-}
-.btn {
-  padding: 15px 25px;
-  background-color: #1e1e1e;
-  color: #00d1ff;
-  text-decoration: none;
-  border: 1px solid #00d1ff;
-  border-radius: 10px;
-  transition: background 0.3s, transform 0.3s;
-}
-.btn:hover {
-  background-color: #00d1ff;
-  color: #000;
-  transform: translateY(-5px);
-}
+    .profile-pic:hover {
+      transform: scale(1.1);
+    }
 
-footer {
-  margin-top: 40px;
-  font-size: 0.9em;
-  color: #888;
-}
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    .btn {
+      padding: 15px 25px;
+      background-color: #1e1e1e;
+      color: #00d1ff;
+      text-decoration: none;
+      border: 1px solid #00d1ff;
+      border-radius: 10px;
+      transition: background 0.3s, transform 0.3s;
+    }
 
+    .btn:hover {
+      background-color: #00d1ff;
+      color: #000;
+      transform: translateY(-5px);
+    }
+
+    .id-card {
+      background-color: #1e1e1e;
+      border: 2px solid #00d1ff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .id-card h2 {
+      color: #00d1ff;
+      margin-bottom: 10px;
+    }
+
+    .id-card p {
+      margin: 5px 0;
+    }
+
+    .social-links a {
+      color: #00d1ff;
+      text-decoration: none;
+      margin-right: 15px;
+      font-size: 1.1em;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -84,14 +111,29 @@ footer {
       <p>Hello! I'm Shahriar. I'm a passionate graphic designer and developer.</p>
     </section>
 
+    <!-- ID CARD SECTION START -->
+    <section class="id-card">
+      <h2>About Me</h2>
+      <p><strong>Name:</strong> Shahriar</p>
+      <p><strong>Age:</strong> 16</p>
+      <p><strong>Location:</strong> Gopalganj, Bangladesh</p>
+      <p><strong>Profession:</strong> Student, Graphic Designer & Web Developer</p>
+      <p><strong>Email:</strong><a href="shariar0232@gmail.com"></a> shariar0232@gmail.com</p>
+      <div class="social-links">
+        <p><strong>Connect with me:</strong></p>
+        <a href="https://www.facebook.com/profile.php?id=61576267650040" target="_blank">📘 Facebook</a>
+        <a href="https://www.instagram.com/shahriarsheikh.pro/" target="_blank">📸 Instagram</a>
+      </div>
+    </section>
+    <!-- ID CARD SECTION END -->
+
     <section class="downloads">
       <h2>Download My Favorite Tools for free</h2>
       <div class="btn-group">
         <a href="https://drive.google.com/file/d/1XF5_eG2j0_JM43IdmaKV7jm8ng1qce-B/view?usp=drive_link" class="btn">Download Office 2019</a>
         <a href="https://drive.google.com/drive/folders/19O_nMuIs6vQsUhEVME4XKZDlVF2hXh-u?usp=drive_link" class="btn">Download Illustrator</a>
         <a href="https://drive.google.com/drive/folders/19O_nMuIs6vQsUhEVME4XKZDlVF2hXh-u?usp=drive_link" class="btn">Download Photoshop</a>
-         <a href="https://drive.google.com/file/d/1qr-vXMcVs11xi4ZzRTI-0ZdxQTjhi-ML/view?usp=sharing" class="btn">Active office and windows</a>
-        
+        <a href="https://drive.google.com/file/d/1qr-vXMcVs11xi4ZzRTI-0ZdxQTjhi-ML/view?usp=sharing" class="btn">Activate Office & Windows</a>
       </div>
     </section>
 
@@ -100,13 +142,11 @@ footer {
     </footer>
   </div>
 
-  <script src="script.js">
-    // Small animation effect on load
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.container');
-  container.style.opacity = 1;
-});
-
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.container');
+      container.style.opacity = 1;
+    });
   </script>
 </body>
 </html>
