@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Downloads</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0e0e0e;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: #00ffc3;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .game-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .game-card {
+      background: #1c1c1c;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 255, 195, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: slideUp 0.8s ease;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 255, 195, 0.25);
+    }
+
+    .game-thumb {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 2px solid #00ffc3;
+    }
+
+    .game-content {
+      padding: 1rem;
+    }
+
+    .game-title {
+      font-size: 1.5rem;
+      color: #00ffc3;
+      margin: 0 0 0.5rem;
+    }
+
+    .game-desc {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #ccc;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #00ffc3;
+      color: #000;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .download-btn:hover {
+      background: #00e6b0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎮 Game Downloads</h1>
+
+  <div class="game-list">
+    <!-- Game 1 -->
+    <div class="game-card">
+      <img src="https://icon2.cleanpng.com/20180202/ede/aviuza6i4.webp" alt="Game 1" class="game-thumb">
+      <div class="game-content">
+        <h2 class="game-title">GTA San anddreas for android</h2>
+        <p class="game-desc">Open world game</p>
+        <a href="https://download2388.mediafire.com/bgfbhu1zfuvg9h6xXsH0GihSZnjm0T8pSHyx2HyhGca1LSXVQm44ph-DzQYd532PR03d-UK3i_WU_BfLfzaasunOvTOstSHkhurYyJZ20g6yqXZ7SpfWE_PbFQWFl2EapgHV5tU5m3fvpFFtXahNGbpNL9DYncjMW164ALxDBvAEe1k/sbfghm5vjqfjosm/GTASanAndreas%E2%80%93NETFLIX18644544238.apks" class="download-btn">Download</a>
+      </div>
+    </div>
+
+    <!-- Game 2 -->
+    <div class="game-card">
+      <img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2024%2F11%2Fgrand-theft-auto-vice-city%2F67454e5743237-grand-theft-auto-vice-city-Icon.webp&w=64&q=75" alt="Game 2" class="game-thumb">
+      <div class="game-content">
+        <h2 class="game-title">GTA Vice city for android</h2>
+        <p class="game-desc">Open world game</p>
+        <a href="https://filenext.org/09963c3f96bd67ae?ref=d5fab61791526ccd28bce1d1c77cf991" class="download-btn">Download</a>
+      </div>
+    </div>
+
+    <!-- Game 3 -->
+    <div class="game-card">
+      <img src="https://play-lh.googleusercontent.com/Do8v4FEj5Ze-vYEz5xCLF2NfNI7y5UO7KQZuFbtH3HOQDFNFv9m9XOiLQymeAR_N5A" alt="Game 3" class="game-thumb">
+      <div class="game-content">
+        <h2 class="game-title">GTA: Liberty City Stories</h2>
+        <p class="game-desc">GTA open world game .</p>
+        <a href="https://s1.spiderdown.com/GTA%20Liberty%20City%20Stories/GTA-LCS-v2.4.362-mod.apk" class="download-btn">Download</a>
+      </div>
+    </div>
+
+    <!-- Game 4 -->
+    <div class="game-card">
+      <img src="https://clan.akamai.steamstatic.com/images/43474063/a9e3a9c22d493207761cc6c7819492c0bb7a5a64.jpg" alt="Game 4" class="game-thumb">
+      <div class="game-content">
+        <h2 class="game-title">Car for sale simulator PC game</h2>
+        <p class="game-desc">Defend your base from waves of zombies using powerful weapons and strategies.</p>
+        <a href="https://filenext.org/37ae32101a4269a0?ref=079f6aad2f088e6cf00e9c66bbb89839" class="download-btn">Download</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
