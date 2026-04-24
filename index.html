@@ -1,183 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shahriar's Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      overflow-x: hidden;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahriar 2026 Portfolio</title>
 
-    .container {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    header h1 {
-      font-size: 2.5em;
-      color: #00d1ff;
-      margin-bottom: 20px;
-    }
-
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin: 20px 0;
-      border: 3px solid #00d1ff;
-      transition: transform 0.3s ease;
-    }
-
-    .profile-pic:hover {
-      transform: scale(1.1);
-    }
-
-    .btn-group {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .btn {
-      padding: 15px 25px;
-      background-color: #1e1e1e;
-      color: #00d1ff;
-      text-decoration: none;
-      border: 1px solid #00d1ff;
-      border-radius: 10px;
-      transition: background 0.3s, transform 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #00d1ff;
-      color: #000;
-      transform: translateY(-5px);
-    }
-
-    .id-card {
-      background-color: #1e1e1e;
-      border: 2px solid #00d1ff;
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 30px;
-      text-align: left;
-    }
-
-    .id-card h2 {
-      color: #00d1ff;
-      margin-bottom: 10px;
-    }
-
-    .id-card p {
-      margin: 5px 0;
-    }
-
-    .social-links a {
-      color: #00d1ff;
-      text-decoration: none;
-      margin-right: 15px;
-      font-size: 1.1em;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #888;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .info-banner {
-  background: #00ffc3;
-  color: #000;
-  padding: 1rem 1.5rem;
-  border-radius: 15px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 255, 195, 0.2);
-  animation: fadeIn 1s ease-in-out;
-      margin-top:10px;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    cursor:none;
 }
 
-.info-banner a {
-  color: #000;
-  font-weight: bold;
-  text-decoration: underline;
+body{
+    background:#0a0a0a;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-.info-banner a:hover {
-  color: #007a64;
+/* CUSTOM CURSOR */
+.cursor{
+    width:15px;
+    height:15px;
+    border:2px solid #00f7ff;
+    border-radius:50%;
+    position:fixed;
+    transform:translate(-50%,-50%);
+    pointer-events:none;
+    transition:0.05s;
+    z-index:9999;
 }
 
-  </style>
+/* PARTICLES */
+#particles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-2;
+}
+
+/* LOADER */
+.loader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    animation:fadeOut 2s forwards;
+    animation-delay:2s;
+}
+.loader h1{
+    color:#00f7ff;
+    text-shadow:0 0 20px #00f7ff;
+}
+
+@keyframes fadeOut{
+    to{opacity:0;visibility:hidden;}
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    z-index:10;
+}
+nav a{
+    color:#00f7ff;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+nav a:hover{
+    text-shadow:0 0 10px #00f7ff;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.hero h1{
+    font-size:3rem;
+    color:#00f7ff;
+    text-shadow:0 0 20px #00f7ff;
+}
+.typing{
+    margin-top:10px;
+    color:#aaa;
+}
+
+/* PROFILE */
+.profile{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:3px solid #00f7ff;
+    margin:20px;
+    box-shadow:0 0 25px #00f7ff;
+    animation:float 3s infinite ease-in-out;
+}
+@keyframes float{
+    50%{transform:translateY(-10px);}
+}
+
+/* SECTIONS */
+section{
+    padding:80px 10%;
+}
+
+.glass{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:25px;
+    margin-top:20px;
+}
+
+/* SKILLS */
+.skill{
+    margin:10px 0;
+}
+.bar{
+    width:100%;
+    height:10px;
+    background:#222;
+    border-radius:20px;
+}
+.bar-fill{
+    height:10px;
+    background:#00f7ff;
+    border-radius:20px;
+    width:0;
+    transition:2s;
+}
+
+/* DOWNLOAD CARDS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+.card{
+    padding:20px;
+    background:rgba(255,255,255,0.05);
+    border-radius:15px;
+    text-align:center;
+    transition:0.4s;
+    border:1px solid #111;
+}
+.card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #00f7ff;
+}
+.card a{
+    color:#00f7ff;
+    text-decoration:none;
+}
+
+/* CLOCK */
+.clock{
+    font-size:1.2rem;
+    color:#00f7ff;
+    margin-top:10px;
+}
+
+/* REVEAL */
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <h1>Shahriar's land</h1>
-    </header>
 
-    <section class="profile">
-      <img src="https://scontent.fdac185-1.fna.fbcdn.net/v/t39.30808-6/646369085_122115056595177376_2006120704181105297_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeEbE7z5_HpCfjKAqytX-zi6EVLOSACqOXARUs5IAKo5cAaHLWqURSeeur_BvVU1WcxlHQn3yvP9GhfVKvxf2HGJ&_nc_ohc=9ez4ZYYwH30Q7kNvwEJZjJx&_nc_oc=AdpjDqqgHm9DkqAlDsW8vQXeTtlFQX9VejqFZZxQWyO-xlNTbT4-Y7QXUzS1oxW1fQw&_nc_zt=23&_nc_ht=scontent.fdac185-1.fna&_nc_gid=OH-vAGHk6DD_aMOwmYhHGQ&_nc_ss=7a32e&oh=00_AfzNwfiQCbUBlHPXsRP7WHMtU4LSTHolC6Xd-klKVvQ3dA&oe=69CB3D98" alt="Shahriar's Photo" class="profile-pic"/>
-      <p>Hello! I'm Shahriar. I'm a passionate graphic designer and developer.</p>
-    </section>
-
-    <!-- ID CARD SECTION START -->
-    <section class="id-card">
-      <h2>About Me</h2>
-      <p><strong>Name:</strong> Shahriar</p>
-      <p><strong>Age:</strong> 16</p>
-      <p><strong>Location:</strong> Gopalganj, Bangladesh</p>
-      <p><strong>Profession:</strong> Student, Graphic Designer & Web Developer</p>
-      <p><strong>Email:</strong><a href="shariar0232@gmail.com"></a> shariar0232@gmail.com</p>
-      <div class="social-links">
-        <p><strong>Connect with me:</strong></p>
-        <a href="https://www.facebook.com/profile.php?id=61585321304455" target="_blank">📘 Facebook</a>
-        <a href="https://www.instagram.com/shahariar_sheikh/?hl=en" target="_blank">📸 Instagram</a>
-      </div>
-    </section>
-    <!-- ID CARD SECTION END -->
-
-    <section class="downloads">
-      <div class="info-banner">
-  <p>🔥 Enjoy 100% Free Game Downloads – Safe & Secure! 👉 
-    <a href="gameslink.html" target="_blank">Visit Download Center</a>
-  </p>
+<div class="loader">
+    <h1>Loading 2026 World...</h1>
 </div>
 
-      <h2>Download My Favorite Tools for free</h2>
-      <div class="btn-group">
-        <a href="https://drive.google.com/file/d/1XF5_eG2j0_JM43IdmaKV7jm8ng1qce-B/view?usp=drive_link" class="btn">Download Office 2019</a>
-        <a href="https://drive.google.com/drive/folders/1-KFYj8Gyq-vC7C4cxdKDrVBgOGi9L9uF?usp=sharing" class="btn">Download Illustrator</a>
-        <a href="https://drive.google.com/file/d/1bI5LN2l-dvvI3kIH9I2C1jjcRBIT_a62/view?usp=drive_link" class="btn">Download Photoshop</a>
-        <a href="https://drive.google.com/file/d/1qr-vXMcVs11xi4ZzRTI-0ZdxQTjhi-ML/view?usp=sharing" class="btn">Activate Office & Windows</a>
-        <a href="game.html" class="btn">Play a puzzle game in online</a>
-      </div>
-    </section>
+<div class="cursor"></div>
 
-    <footer>
-      <p>&copy; 2025 Shahriar. All rights reserved.</p>
-    </footer>
-  </div>
+<canvas id="particles"></canvas>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const container = document.querySelector('.container');
-      container.style.opacity = 1;
-    });
-  </script>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#downloads">Downloads</a>
+</nav>
+
+<section class="hero" id="home">
+    <img class="profile" src="https://scontent.fdac185-1.fna.fbcdn.net/v/t39.30808-6/646369085_122115056595177376_2006120704181105297_n.jpg">
+    <h1>Shahriar</h1>
+    <div class="typing" id="typing"></div>
+    <div class="clock" id="clock"></div>
+</section>
+
+<section id="about" class="hidden">
+<div class="glass">
+<h2>About Me</h2>
+<p>Name: Shahriar</p>
+<p>Age: 17</p>
+<p>Location: Pona, Kashiani, Gopalganj</p>
+<p>Developer • Designer • Student</p>
+</div>
+</section>
+
+<section id="skills" class="hidden">
+<div class="glass">
+<h2>Skills</h2>
+
+<div class="skill">HTML<div class="bar"><div class="bar-fill" data-width="95%"></div></div></div>
+<div class="skill">CSS<div class="bar"><div class="bar-fill" data-width="90%"></div></div></div>
+<div class="skill">JavaScript<div class="bar"><div class="bar-fill" data-width="80%"></div></div></div>
+
+</div>
+</section>
+
+<section id="downloads" class="hidden">
+<div class="glass">
+<h2>Downloads</h2>
+
+<div class="grid">
+<div class="card"><a href="#">Office 2019</a></div>
+<div class="card"><a href="#">Photoshop</a></div>
+<div class="card"><a href="#">Illustrator</a></div>
+<div class="card"><a href="#">Games</a></div>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Shahriar | Future Web Developer
+</footer>
+
+<script>
+// CURSOR
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left=e.pageX+"px";
+cursor.style.top=e.pageY+"px";
+});
+
+// TYPING
+const text="Graphic Designer • Web Developer • Future Coder";
+let i=0;
+function typing(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,80);
+}
+}
+typing();
+
+// CLOCK
+setInterval(()=>{
+document.getElementById("clock").innerText=new Date().toLocaleTimeString();
+},1000);
+
+// SCROLL REVEAL
+const obs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+e.target.classList.add("show");
+}
+});
+});
+document.querySelectorAll(".hidden").forEach(el=>obs.observe(el));
+
+// SKILL ANIMATION
+window.addEventListener("scroll",()=>{
+document.querySelectorAll(".bar-fill").forEach(bar=>{
+bar.style.width=bar.getAttribute("data-width");
+});
+});
+
+// PARTICLES (simple)
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let dots=[];
+for(let i=0;i<80;i++){
+dots.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2
+});
+}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+ctx.fillStyle="#00f7ff";
+
+dots.forEach(d=>{
+ctx.beginPath();
+ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
+ctx.fill();
+
+d.y+=0.5;
+if(d.y>canvas.height)d.y=0;
+});
+
+requestAnimationFrame(draw);
+}
+draw();
+</script>
+
 </body>
 </html>
